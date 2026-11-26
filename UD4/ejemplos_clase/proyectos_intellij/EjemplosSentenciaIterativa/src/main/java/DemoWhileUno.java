@@ -85,6 +85,17 @@ public class DemoWhileUno {
          */
         public void ejemplo04 ()
         {
+            int suma = 0;
+            int contador = 0;
+            int producto = 1;
+
+            while(contador <= 20){
+                contador ++;
+                producto += 1;
+                suma += 1;
+            }
+            System.out.printf( "La suma es: " + suma);
+            System.out.printf("El producto: " + producto);
 
         }
 
@@ -97,8 +108,21 @@ public class DemoWhileUno {
          */
         public void ejemplo05 ()
         {
+            int numero = 0;
+            int contador = generador.nextInt(10,50);
+            while (numero != 25){
+                System.out.printf("%4d", numero);
+                contador++;
+
+                if(contador % 6 == 0){
+                    IO.println();
+                }
+            }
+        //nexint (es clase que genera numeros aleatorios sin que tenga que operar mucho como en el math.random)
+
 
         }
+
 
         /**
          *  Generar aleatorios entre 0 y 50 inclusive y sumarlos.
@@ -107,6 +131,19 @@ public class DemoWhileUno {
          */
         public void ejemplo06 ()
         {
+            int numero = (int)(Math.random()* 51);
+            int suma = 0;
+            while(numero != 0){
+                numero = (int)(Math.random()* 51);
+                suma += numero;
+                System.out.printf("Generado  %d\n", numero);
+
+            }
+            IO.println(String.format("La suma es %d\n", suma));
+
+
+
+
 
         }
 
@@ -347,11 +384,8 @@ public class DemoWhileUno {
 
         static void main(String[]args){
             DemoWhileUno miDemo = new DemoWhileUno();
-            miDemo.ejemplo01();
-            DemoWhileUno miDemo2 = new DemoWhileUno();
-            miDemo2.ejemplo02();
-            DemoWhileUno monedaDemo = new DemoWhileUno();
-            monedaDemo.ejemplo03();
+            miDemo.ejemplo06();
+
         }
     }
 
